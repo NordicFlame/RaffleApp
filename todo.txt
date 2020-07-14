@@ -1,0 +1,11 @@
+TODO
+
+Raffle meta data
+sell multiple tickets
+max tickets per raffle
+
+ADDITIONAL:
+Repeat customer handling
+Raffle icon/cover
+Sharing text dump of ticket
+Margin Raffle

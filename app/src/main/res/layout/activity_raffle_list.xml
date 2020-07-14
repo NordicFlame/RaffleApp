@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="au.edu.utas.mekvall.assignment.RaffleList">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="Raffle Name"
+            android:textColor="@android:color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/lblID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/listRad"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Sort By:"></TextView>
+
+        <RadioButton
+            android:id="@+id/radNewest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="newest"
+            android:onClick="sortNew"/>
+
+        <RadioButton
+            android:onClick="sortOld"
+            android:id="@+id/radOldest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="oldest" />
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/raffleListings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/listRad"></ListView>
+</androidx.constraintlayout.widget.ConstraintLayout>
